@@ -23,20 +23,36 @@ html {
   .btn {
     @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
   }
-  
+
   .btn-primary {
     @apply bg-primary text-white hover:bg-primary-dark;
   }
-  
+
   .section-container {
     @apply max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8;
   }
-  
+
   .section-title {
     @apply text-3xl font-bold mb-8 text-center;
   }
-  
+
   .card {
     @apply bg-white dark:bg-dark-lighter rounded-lg shadow-md overflow-hidden transition-all duration-300;
   }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
 }

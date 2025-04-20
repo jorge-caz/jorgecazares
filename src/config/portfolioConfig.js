@@ -44,7 +44,7 @@ const portfolioConfig = {
       title: "Sparkmind.pro",
       description: "A tutoring platform connecting students with expert tutors across various subjects.",
       githubUrl: "https://github.com/jorge-caz/sparkmind",
-      imageUrl: "../../public/sparkmind.png",
+      imageUrl: "/sparkmind.png",
       status: false,
     },
     {
@@ -52,7 +52,7 @@ const portfolioConfig = {
       title: "TradeAPixel.com",
       description: "An innovative platform for digital asset trading and pixel art marketplace.",
       githubUrl: "https://github.com/jorge-caz/tradeapixel",
-      imageUrl: "../../public/tradeapixel.png",
+      imageUrl: "/tradeapixel.png",
       status: false,
     }
   ],

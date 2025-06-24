@@ -17,5 +17,5 @@ const htmlAliasPlugin = () => ({
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [react(), htmlAliasPlugin()],
-  base: command === 'serve' ? '/' : '/jorgecazares/'
+  base: command === 'serve' ? '/' : './'
 }))

@@ -1,6 +1,6 @@
 import type { FSNode } from '../data/fs'
 
-export const getIconForNode = (node: FSNode): string | React.ComponentType => {
+export const getIconForNode = (node: FSNode): string => {
   // Special cases by ID - return React components for social media
   if (node.id === 'recycle') return '/icons/recycle-bin.svg'
   if (node.id === 'github') return 'FaGithub' // Return component identifier

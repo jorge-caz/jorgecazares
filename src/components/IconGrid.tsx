@@ -30,7 +30,6 @@ const IconGrid: React.FC<IconGridProps> = ({ folderId, onOpen, unbounded = false
     visible: false,
     targetId: null,
   })
-  const [wallpaperInput, setWallpaperInput] = useState<HTMLInputElement | null>(null)
 
   // --- Marquee selection state ---
   const [selectRect, setSelectRect] = useState<{ x: number; y: number; width: number; height: number; visible: boolean }>({ x: 0, y: 0, width: 0, height: 0, visible: false })

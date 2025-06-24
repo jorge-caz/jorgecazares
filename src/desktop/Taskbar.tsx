@@ -3,7 +3,6 @@ import type { FSNode } from '../data/fs'
 import './Taskbar.css'
 import { getIconForNode } from '../utils/iconUtils'
 import { useFS } from '../context'
-import { showBlueScreen } from '../utils/blueScreen'
 
 export interface TaskbarProps {
   windows: { 

@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from 'react'
 import type React from 'react'
 import Draggable from 'react-draggable'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './DesktopIcon.css'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export interface DesktopIconProps {
   id: string
@@ -117,6 +117,8 @@ const DesktopIcon = ({ id, label, iconSrc, position, onDoubleClick, selected = f
         }
       }}
       onDrag={(e, data) => {
+        void data; // mark parameter as used to satisfy TypeScript
+
         const parentRect = (nodeRef.current?.parentElement as HTMLElement | null)?.getBoundingClientRect()
         const cursorX = (e as MouseEvent).clientX - (parentRect?.left ?? 0)
         const cursorY = (e as MouseEvent).clientY - (parentRect?.top ?? 0)

@@ -16,7 +16,7 @@ interface HistoryItem {
   output: string[]
 }
 
-const Terminal: React.FC<TerminalProps> = ({ cwd, onOpen }) => {
+const Terminal: React.FC<TerminalProps> = ({ cwd }) => {
   const { fs, add, move: moveNodeCtx, update: updateNodeCtx, remove: removeNodeCtx } = useFS()
 
   const [cwdId, setCwdId] = useState<string>(cwd)

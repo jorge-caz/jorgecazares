@@ -127,7 +127,7 @@ const Taskbar = ({ windows, activeId, onTaskClick }: TaskbarProps) => {
   return (
     <div className="taskbar">
       <button className="start-button" onClick={() => setStartOpen((o) => !o)} title="Start">
-        <img src="/icons/start.svg" alt="start" className="start-logo" />
+        <img src={`${import.meta.env.BASE_URL}icons/start.svg`} alt="start" className="start-logo" />
       </button>
 
       {startOpen && (
@@ -191,10 +191,10 @@ const Taskbar = ({ windows, activeId, onTaskClick }: TaskbarProps) => {
       <div className="taskbar-right">
         <div className="status-icons">
           <button className="status-btn" onClick={wifiEgg} title="WiFi">
-            <img src="/icons/wifi.svg" alt="wifi" />
+            <img src={`${import.meta.env.BASE_URL}icons/wifi.svg`} alt="wifi" />
           </button>
           <button className="status-btn" onClick={batteryEgg} title="Battery">
-            <img src="/icons/battery.svg" alt="battery" />
+            <img src={`${import.meta.env.BASE_URL}icons/battery.svg`} alt="battery" />
           </button>
         </div>
         <div className="clock-date">

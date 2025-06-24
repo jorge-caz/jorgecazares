@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Education</title>
+  <style>
+    :root {
+      --primary: #667eea;
+      --primary-dark: #764ba2;
+      --secondary: #8b5cf6;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.9);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      margin: 0 0 1.25rem 0;
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+    .mit-highlight .card-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .card-icon.accent { color: var(--accent); }
+    .card p {
+      margin: 0 0 1rem 0;
+      color: var(--text-secondary);
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+    .mit-highlight {
+      border-left: 4px solid var(--accent);
+      background: rgba(245, 158, 11, 0.05);
+    }
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 2rem; }
+      .card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img src="mit_banner.jpg" alt="MIT Campus" />
+      <h1>My Education</h1>
+    </header>
+    
+    <p class="subtitle">
+      My academic journey has been driven by curiosity and a passion for problem-solving.
+    </p>
+    
+    <div class="content">
+      <div class="card mit-highlight">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+          Bachelor of Science in Mathematics & Computer Science
+        </h3>
+        <p><strong>Massachusetts Institute of Technology (MIT)</strong></p>
+        <p>Rigorous curriculum combining theoretical mathematics with practical computer science. Comprehensive study across multiple domains:</p>
+        <p><strong>Core Areas:</strong> Algorithms, Data Structures, Probability, Stochastic Processes, Assembly Programming, Software Construction</p>
+        <p><strong>Applied Skills:</strong> Web Development, Machine Learning, Project Management, Entrepreneurship, Sales, Innovation Strategy</p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+          </svg>
+          Associate of Arts in General Studies
+        </h3>
+        <p><strong>Laredo College</strong> • Foundation in liberal arts and sciences</p>
+        <p>Built a strong foundation across multiple disciplines, developing critical thinking and analytical skills.</p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="14" x="2" y="3" rx="2"/>
+            <line x1="8" x2="16" y1="21" y2="21"/>
+            <line x1="12" x2="12" y1="17" y2="21"/>
+          </svg>
+          Self-Taught Full-Stack Development
+        </h3>
+        <p><strong>Continuous Learning</strong> • Modern web technologies</p>
+        <p>Mastered React, TypeScript, Node.js, and cloud technologies through hands-on projects and real-world applications.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

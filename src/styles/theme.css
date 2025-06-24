@@ -1,0 +1,25 @@
+/* Windows XP-style theme variables */
+:root {
+  /* palette */
+  --xp-blue: #0e64c5;
+  --xp-light-blue: #3a6ea5;
+  --xp-taskbar: #082461;
+  --xp-gray-1: #d6d6d6;
+  --xp-gray-2: #9c9c9c;
+
+  /* fonts & sizing */
+  --font-ui: "Tahoma", sans-serif;
+  --border-radius: 3px;
+
+  /* z-index layers */
+  --z-taskbar: 900;
+  --z-window: 1000;
+  --z-modal: 1100;
+}
+
+/* Global defaults */
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--xp-blue);
+}

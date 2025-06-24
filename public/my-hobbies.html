@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Hobbies</title>
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --secondary: #8b5cf6;
+      --accent: #ffffff;
+      --success: #10b981;
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.9);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+    }
+
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0; 
+      padding: 0; 
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .selfie {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .hero-text h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .hero-text p {
+      margin: 0.5rem 0 0 0;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      margin: 0 0 1.25rem 0;
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--text-primary);
+    }
+    .card-icon.accent { color: var(--accent); }
+    .card p {
+      margin: 0 0 1rem 0;
+      color: var(--text-secondary);
+    }
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .hero { flex-direction: column; text-align: center; }
+      .content { grid-template-columns: 1fr; }
+      .card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="selfie" src="picture_myself.png" alt="Jorge's photo" />
+      <div class="hero-text">
+        <h1>My Hobbies</h1>
+        <p>When I'm not coding, you'll find me exploring these passions</p>
+      </div>
+    </header>
+    
+    <div class="content">
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+          Learning Languages
+        </h3>
+        <p>Currently fluent in English and Spanish, actively learning Italian and Chinese. I love exploring different cultures through their languages and connecting with people worldwide.</p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+          Teaching & Mentoring
+        </h3>
+        <p>Passionate about education and helping others grow. I mentor aspiring developers and teach complex STEM concepts, finding fulfillment in watching students achieve their goals.</p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+          </svg>
+          Piano
+        </h3>
+        <p>Music has always been a creative outlet for me. Playing piano helps me unwind and express emotions that code sometimes can't capture.</p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect width="15" height="14" x="1" y="5" rx="2" ry="2"/>
+          </svg>
+          Content Creation
+        </h3>
+        <p>I create educational videos and tutorials online, sharing programming tips and math concepts. Building an audience while helping others learn is incredibly rewarding.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
